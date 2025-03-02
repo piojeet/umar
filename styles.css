@@ -953,6 +953,21 @@ footer {
     }
 }
 
+
+@media only screen and (max-width: 412px) {
+    .content2 {
+        height: 36vh;
+    }
+
+    .hero .img-wrapper {
+        height: 56vh;
+    }
+
+    .testimonial {
+        min-height: 75vh;
+    }
+}
+
 @media only screen and (max-width: 375px) {
     .animate-wrapper .animate {
         font-size: 35px !important;
