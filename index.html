@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Fullscreen slides with TweenLite, CSSPlugin and ScrollToPlugin
+    </title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" /> -->
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .gradient-green {
+            background: white;
+        }
+
+        .gradient-blue {
+            background: blue;
+        }
+
+        .gradient-red {
+            background: red;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+
+        .content {
+            height: 100vh;
+        }
+
+
+
+        .hero {
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            /* position: relative; */
+            z-index: 2 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero gradient-green">
+        <div class="banner-lights">
+            <img src="images/banner-lights.png" alt="" />
+        </div>
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="logo-wrapper">
+                    <a href="/">
+                        <img src="images/logo.png" alt="Logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img class="img-fluid" src="images/banner-bg.png" alt="" />
+        </div>
+        <section class="animate-wrapper">
+            <div class="container">
+                <div class="animate">Turbocharging Technology Business Growth</div>
+            </div>
+            <div class="banner-light-ani banner-container banner-light-ring">
+                <img src="/images/Turbocharging.png" alt="" class="ani-img-ring" />
+            </div>
+        </section>
+    </section>
+    <section class="content section-wrapper-ref">
+        <div class="banner-light banner-container banner-light-ring">
+            <img src="images/Group 8796.png" alt="" />
+        </div>
+        <div class="text-wrapper-ref">
+            <h2 class="headline-ref">Refreshingly integrated B2B technology campaigns</h2>
+            <p class="subtext-ref">delivered with</p>
+        </div>
+        <h1 class="main-heading-ref">confidence and originality.</h1>
+    </section>
+
+    <section class="video-cont">
+        <div class="banner-light-content3 banner-container banner-light-ring">
+            <img src="/images/Group-8810.png" alt="" class="content3-img-ring" />
+        </div>
+        <div class="content2 gradient-blue">
+            <img src="/images/Rectangle 64.png" alt="" class="content2-shadow">
+            <img src="/images/Rectangle 65.png" alt="" class="content2-shadow-white">
+
+            <img src="/images/connorcorcoran_White_brick_wall_green_plants_white_framed_sig_efd1d6cf-7416-4ea3-87ef-596e42daa701_2 1.png"
+                alt="" class="content2-img">
+
+
+            <div class="video-cont-video">
+                <button class="video-play-btn">
+                    <img src="/images/play.svg" alt="Play Icon">
+                </button>
+                <video class="video-player" controls>
+                    <source src="/images/119289-717336867_large.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="content3 section-wrapper">
+            <div class="heading-container-content3">
+                <h4 class="subheading-content3">Why Bite?</h4>
+                <h3 class="main-heading-content3">
+                    Why Bite? We’re all about the hustle, not the hassle. No jargon, no fluff.
+                </h3>
+            </div>
+            <div class="text-container-content3">
+                <p class="description-content3">
+                    Whether you're a technology vendor, distributor, reseller, or a managed service provider in cyber
+                    security, cloud, or SaaS, we’ll immerse ourselves in your business, get our hands dirty, crack on
+                    and help you drive your marketing efforts. We believe in making informed decisions quickly,
+                    communicating skilfully and acting on the results, creating refreshingly integrated campaigns
+                    delivered with confidence and originality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <div class="services-light banner-container banner-light-ring">
+            <img src="/images/Group 8795.png" alt="" class="services-img-ring" />
+        </div>
+        <div class="services-main">
+            <h2 class="services-heading">
+                Consultancy, creative and digital marketing services.
+                <span>Turbocharging growth.</span>
+            </h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <div>
+                        <div class="service-header">
+                            <div class="service-category">Marketing</div>
+                            <div class="service-icon">gif</div>
+                            <h4 class="service-title">CONSULTANCY</h4>
+                        </div>
+                        <p class="service-description">
+                            Acting as true extensions of your team we get under the skin of your business and find out what
+                            really makes you tick. We’ll craft measurable go to market strategies to bring your unique story
+                            to life and execute campaigns that align with sales to drive results . Our
+                            Marketing-as-a-Service and Marketing Discovery offerings are tried, tested and trusted.
+                        </p>
+                    </div>
+                    <a href="#" class="service-link">Explore More</a>
+                </div>
+
+                <div class="service-box">
+                    <div>
+                        <div class="service-header">
+                            <div class="service-category">Marketing</div>
+                            <div class="service-icon">gif</div>
+                            <h4 class="service-title">CONSULTANCY</h4>
+                        </div>
+                        <p class="service-description">
+                            Our understanding of technology and the channel fuels our creative ideas, enabling us to swiftly
+                            and deftly grasp your brief and deliver creative campaigns that drive impact. Our bright and
+                            dynamic team can bring your brand story to life. We are proud to be the creative agency of
+                            choice for some of the biggest names in the channel.
+                        </p>
+                    </div>
+                    <a href="#" class="service-link">Explore More</a>
+                </div>
+
+                <div class="service-box">
+                    <div>
+                        <div class="service-header">
+                            <div class="service-category">Marketing</div>
+                            <div class="service-icon">gif</div>
+                            <h4 class="service-title">CONSULTANCY</h4>
+                        </div>
+                        <p class="service-description">
+                            We excel in B2B digital services. We can boost your online visibility with SEO, maximise ROI
+                            with targeted paid media, foster customer relationships through email marketing, and create
+                            stunning, user-friendly websites with our website development expertise.
+                        </p>
+                    </div>
+                    <a href="#" class="service-link">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonial">
+        <div class="testimonial-content">
+            <h3 class="testimonial-title">Testimonial</h3>
+            <p class="testimonial-text">
+                ‘Not only do I <span>LOVE</span> working with <span>Bite IT Marketing</span> but so do the rest of the
+                Marketing Team straight through to the Sales and Technical Teams. Why? Because Bite fully understand the
+                channel, they understand that we (a Value Added Distributor) have the Vendors Objectives, Distributor
+                Objectives <span>PLUS</span> Reseller Objectives and they bring them together to create one cohesive
+                sales and marketing channel go-to-market strategy’
+            </p>
+            <div class="testimonial-author">Marketing Director</div>
+            <div class="testimonial-company">Global Technology Distributor</div>
+        </div>
+
+        <div class="testimonial-marquee">
+            <div class="marquee-content">
+
+                <div class="marquee-text">
+                    <img src="/images/Asset-11.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/transparent-2021-award-finalist.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/CRN-Website-Logo-2021.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/crn-finalists.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/crn-finalists.png.png" alt="">
+                </div>
+
+                <div class="marquee-text">
+                    <img src="/images/Asset-11.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/transparent-2021-award-finalist.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/CRN-Website-Logo-2021.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/crn-finalists.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/crn-finalists.png.png" alt="">
+                </div>
+
+                <div class="marquee-text">
+                    <img src="/images/Asset-11.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/transparent-2021-award-finalist.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/CRN-Website-Logo-2021.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/crn-finalists.png.png" alt="">
+                </div>
+                <div class="marquee-text">
+                    <img src="/images/crn-finalists.png.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <section>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <a href="/" class="footer-logo">
+                        <img src="images/logo.png" alt="Logo" />
+                    </a>
+                    <p class="footer-address">
+                        Bite IT Marketing Ltd.<br>
+                        The Apple Market Hub,<br>
+                        9 Crown Passage,<br>
+                        Kingston upon Thames,<br>
+                        KT1 1JD
+                    </p>
+                    <a href="mailto:hello@biteitmarketing.com" class="footer-email">hello@biteitmarketing.com</a>
+                </div>
+
+                <div class="footer-image">
+                    <img src="/images/Container.png" alt="img">
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Creative</a></li>
+                    <li><a href="#">Digital</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Creative</a></li>
+                    <li><a href="#">Digital</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© Copyright Bite IT Marketing 2025</p>
+                <p class="footer-credit">Website by us!</p>
+            </div>
+
+            <div class="footer-light banner-container banner-light-ring">
+                <img src="/images/Group 8798.png" alt="" class="footer-img-ring" />
+            </div>
+        </section>
+    </footer>
+
+
+
+
+    <!-- partial -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <!-- <script src="scroller.js"></script>  -->
+
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const textElements = document.querySelectorAll(".animate");
+
+            textElements.forEach(textElement => {
+                const text = textElement.textContent;
+                textElement.innerHTML = text.split("").map(char => `<span>${char}</span>`).join("");
+
+                const chars = textElement.querySelectorAll("span");
+
+                gsap.from(chars, {
+                    scrollTrigger: {
+                        trigger: textElement,
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        scrub: true,
+                    },
+                    color: "rgba(0, 186, 204, 0.2)",
+                    stagger: 1,  // Delay between each character animation
+                    duration: 1,
+                });
+            });
+        });
+
+    </script>
+
+
+    <script>
+        console.clear();
+
+        // gsap.registerPlugin(ScrollTrigger);
+
+        // ScrollTrigger.create({
+        //     trigger: ".hero",
+        //     start: "bottom bottom",
+        //     end: "top top",
+        //     endTrigger: ".content",
+        //     pin: true,
+        //     pinSpacing: false,
+        //     markers: true
+        // });
+
+        //     document.addEventListener("DOMContentLoaded", () => {
+        //     gsap.registerPlugin(ScrollTrigger);
+
+        //     ScrollTrigger.create({
+        //         trigger: ".content",
+        //         start: "top bottom", // Starts when .content reaches the bottom of viewport
+        //         end: "top top", // Ends when .content reaches the top
+        //         pin: false, // Do not pin
+        //         markers: true, // For debugging, remove in production
+        //         onEnter: () => {
+        //             document.querySelector(".hero").style.zIndex = "1";
+        //             document.querySelector(".content").style.zIndex = "2"; // Bring .content above .hero
+        //         },
+        //         onLeaveBack: () => {
+        //             document.querySelector(".hero").style.zIndex = "2"; // Reset z-index when scrolling back up
+        //             document.querySelector(".content").style.zIndex = "1";
+        //         }
+        //     });
+        // });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // First ScrollTrigger: .content overlaps .hero
+            ScrollTrigger.create({
+                trigger: ".content",
+                start: "top bottom",
+                end: "top top",
+                pin: ".hero",
+                pinSpacing: false,
+                // markers: true, // Debugging markers (remove in production)
+                onEnter: () => {
+                    let hero = document.querySelector(".hero");
+                    let content = document.querySelector(".content");
+
+                    hero.style.zIndex = "2";
+                    content.style.zIndex = "2";
+                    content.style.position = "relative"; // Ensure it's in normal flow
+                },
+                onLeaveBack: () => {
+                    let hero = document.querySelector(".hero");
+                    let content = document.querySelector(".content");
+
+                    hero.style.zIndex = "2";
+                    content.style.zIndex = "1";
+                }
+            });
+
+            // Second ScrollTrigger: .content2 overlaps .content
+            ScrollTrigger.create({
+                trigger: ".content2",
+                start: "top bottom",
+                end: "top top",
+                // markers: true, // Debugging markers (remove in production)
+                onEnter: () => {
+                    let content = document.querySelector(".content");
+                    let content2 = document.querySelector(".content2");
+
+                    content.style.zIndex = "1";
+                    content.style.position = "sticky";
+                    content.style.top = "0"; // Stick at top
+
+                    content2.style.zIndex = "2";
+                },
+                onLeaveBack: () => {
+                    let content = document.querySelector(".content");
+                    let content2 = document.querySelector(".content2");
+
+                    content.style.zIndex = "2";
+                    content.style.position = "relative"; // Reset to normal
+                    content2.style.zIndex = "1";
+                }
+            });
+
+            // me 
+            ScrollTrigger.create({
+                trigger: ".services",
+                start: () => {
+                    let services = document.querySelector(".services");
+                    let viewportHeight = window.innerHeight;
+                    let servicesHeight = services.offsetHeight;
+
+                    let overflowHeight = servicesHeight - viewportHeight;
+                    let topOffset = overflowHeight > 0 ? -overflowHeight : 0;
+
+                    return `top ${topOffset}px`;
+                },
+                start: "top 50%",
+                end: "top bottom",
+                // markers: true,
+                onEnter: (self) => {
+                    let services = document.querySelector(".services");
+                    let viewportHeight = window.innerHeight;
+                    let servicesHeight = services.offsetHeight;
+
+                    let overflowHeight = servicesHeight - viewportHeight;
+                    let topOffset = overflowHeight > 0 ? -overflowHeight : 0;
+
+                    services.style.position = "sticky";
+                    services.style.top = `${topOffset}px`;
+                    services.style.zIndex = "5";
+                },
+                onLeaveBack: () => {
+                    let services = document.querySelector(".services");
+                    services.style.position = "relative";
+                    services.style.zIndex = "5";
+                    services.style.top = "0";
+                },
+                invalidateOnRefresh: true
+            });
+
+
+
+        });
+
+
+    </script>
+
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray("section").forEach((section, i) => {
+
+            gsap.to(section.querySelector(".banner-light-ring"), {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top center",
+                    end: "+=100",
+                    toggleActions: "play none none reverse",
+                    // markers: true
+                }
+            });
+
+        });
+
+    </script>
+
+
+
+    <script>
+        const video = document.querySelector(".video-player");
+        const playButton = document.querySelector(".video-play-btn img");
+        const videoContainer = document.querySelector(".video-cont-video");
+
+        let hideTimeout; // बटन छिपाने के लिए टाइमर
+
+        playButton.addEventListener("click", () => {
+            if (video.paused) {
+                video.play();
+                playButton.src = "/images/pause.svg"; // Pause icon दिखाएं
+                resetHideTimer(); // हटा सकते हैं, क्योंकि play event पहले से मौजूद है
+            } else {
+                video.pause();
+                playButton.src = "/images/play.svg"; // Play icon दिखाएं
+                videoContainer.classList.remove("hide-button"); // Pause होने पर बटन दिखाएं
+                clearTimeout(hideTimeout); // छिपाने का टाइमर रोक दें
+            }
+        });
+
+        video.addEventListener("ended", () => {
+            playButton.src = "/images/play.svg";
+            videoContainer.classList.remove("hide-button"); // वीडियो खत्म होने पर बटन दिखाएं
+            clearTimeout(hideTimeout);
+        });
+
+        function resetHideTimer() {
+            clearTimeout(hideTimeout);
+
+            if (!video.paused) { // केवल तब छुपे जब वीडियो प्ले हो
+                hideTimeout = setTimeout(() => {
+                    videoContainer.classList.add("hide-button");
+                }, 5000);
+            }
+        }
+
+        // जब माउस वीडियो पर आए तो बटन दिखाएं
+        videoContainer.addEventListener("mouseenter", () => {
+            clearTimeout(hideTimeout);
+            videoContainer.classList.remove("hide-button");
+        });
+
+        // जब माउस हटे तो बटन छिपाने का टाइमर शुरू करें **सिर्फ जब वीडियो प्ले हो**
+        videoContainer.addEventListener("mouseleave", () => {
+            if (!video.paused) {
+                resetHideTimer();
+            }
+        });
+
+        // जब वीडियो प्ले हो, तभी बटन छिपाने का टाइमर चले
+        video.addEventListener("play", resetHideTimer);
+
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const marquee = document.querySelector(".marquee-content");
+
+            function duplicateContent() {
+                const items = Array.from(marquee.children);
+                items.forEach(item => {
+                    const clone = item.cloneNode(true); // Clone the testimonial
+                    marquee.appendChild(clone);
+                });
+            }
+
+            function startMarquee() {
+                let scrollAmount = 0;
+                const speed = 1; // Adjust speed here
+
+                function scroll() {
+                    scrollAmount -= speed;
+                    marquee.style.transform = `translateX(${scrollAmount}px)`;
+
+                    if (Math.abs(scrollAmount) >= marquee.scrollWidth / 2) {
+                        scrollAmount = 0;
+                    }
+
+                    requestAnimationFrame(scroll);
+                }
+
+                scroll();
+            }
+
+            duplicateContent();
+            startMarquee();
+        });
+
+    </script>
+
+</body>
+
+</html>
